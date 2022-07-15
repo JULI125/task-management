@@ -73,8 +73,6 @@
  * @swagger
  * /api/task:
  *  post: 
- *      security:
- *         - bearerAuth: []
  *      summary: Creates a new task user 
  *      tags: [metod post the task]
  *      requestBody:
@@ -147,6 +145,8 @@
  *@swagger
  * /api/registro:
  *  get:
+ *      security:
+ *         - bearerAuth: []
  *      summary: Bring all registrations
  *      tags: [registrations]
  *      responses:
@@ -165,8 +165,6 @@
  *@swagger
  * /api/registro:
  *  post: 
- *      security:
- *         - bearerAuth: []
  *      summary: Creates a new user 
  *      tags: [metod post the register]
  *      requestBody:
@@ -185,6 +183,8 @@
  *  @swagger
  * /api/registro/:id:
  *  put:
+ *      security:
+ *         - bearerAuth: []
  *      summary: Edit the registration
  *      tags: [update the registration]
  *      parameters:
