@@ -1,0 +1,14 @@
+[ 
+    {
+        "image": "task.JPEG",
+        "nameOfTheHomework": "Prueba tecnica",
+        "priority": "Refuerzo",
+        "date": "7-07-2022"
+    },
+    {
+        "image": "",
+        "nameOfTheHomework": "Gestion de tareas",
+        "priority": "Ultima tarea",
+        "date": "7-06-2022"
+    }
+]
