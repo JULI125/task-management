@@ -1,5 +1,5 @@
 /**
- * @swagger
+ *@swagger
  * components:
  *  schemas:
  *      register:
@@ -24,7 +24,7 @@
  *                  - password
  * 
  *
- * @swagger
+ *@swagger
  * components:
  *  schemas:
  *      task:
@@ -51,8 +51,8 @@
  *
  *
  * 
- * @swagger
- * /api/task:
+ *@swagger
+ * /task:
  *  get:
  *      security:
  *         - bearerAuth: []
@@ -70,9 +70,11 @@
  *                     $ref: '#/components/schemas/task'
  * 
  *
- * @swagger
- * /api/task:
+ *@swagger
+ * /task:
  *  post: 
+ *      security:
+ *         - bearerAuth: []
  *      summary: Creates a new task user 
  *      tags: [metod post the task]
  *      requestBody:
@@ -89,8 +91,8 @@
  *              description: Failed to create a task        
  *
  * 
- * @swagger
- * /api/task/:id:
+ *@swagger
+ * /task/:id:
  *  put:
  *      security:
  *         - bearerAuth: []
@@ -119,7 +121,7 @@
  *              description: Bad request
  * 
  *@swagger
- * /api/task/:id:
+ * /task/:id:
  *  delete:
  *      security:
  *         - bearerAuth: []
@@ -165,6 +167,8 @@
  *@swagger
  * /api/registro:
  *  post: 
+ *      security:
+ *         - bearerAuth: []
  *      summary: Creates a new user 
  *      tags: [metod post the register]
  *      requestBody:
@@ -180,7 +184,7 @@
  *          500:
  *              description: Failed to create user
  * 
- *  @swagger
+ *@swagger
  * /api/registro/:id:
  *  put:
  *      security:
