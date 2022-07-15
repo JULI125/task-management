@@ -28,7 +28,7 @@ router.use((err: any|ExpressJoiError, _req: Request, res: Response, next: NextFu
     }
 });
 
-router.get("/task",  async (_req: Request, res: Response) => {
+router.get("/task", decodeToken, async (_req: Request, res: Response) => {
     try {
         const tarea = await collections.tareas.find({}).toArray();
         res.status(200).send(tarea);
@@ -100,7 +100,7 @@ router.delete("/task/:id", decodeToken, async (req: Request, res: Response) => {
     }
 });
 
-routerRegister.get('/registro',  async (req: Request, res: Response) => { 
+routerRegister.get('/registro', decodeToken, async (req: Request, res: Response) => { 
     let cliente = await pool.connect();
     const result: QueryResult = await pool.query('SELECT * FROM register;');
     try {
