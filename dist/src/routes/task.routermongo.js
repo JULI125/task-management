@@ -38,7 +38,7 @@ exports.router.use((err, _req, res, next) => {
         res.status(500).send('Internal server error');
     }
 });
-exports.router.get("/task", (_req, res) => __awaiter(void 0, void 0, void 0, function* () {
+exports.router.get("/task", adminToken_1.decodeToken, (_req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const tarea = yield database_service_1.collections.tareas.find({}).toArray();
         res.status(200).send(tarea);
@@ -111,7 +111,7 @@ exports.router.delete("/task/:id", adminToken_1.decodeToken, (req, res) => __awa
         res.status(400).send(error.message);
     }
 }));
-exports.routerRegister.get('/registro', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+exports.routerRegister.get('/registro', adminToken_1.decodeToken, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     let cliente = yield register_service_1.pool.connect();
     const result = yield register_service_1.pool.query('SELECT * FROM register;');
     try {
